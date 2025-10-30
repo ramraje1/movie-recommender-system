@@ -3,3 +3,7 @@ pandas
 scikit-learn
 numpy
 requests
+gdown
+os
+gzip
+difflib
