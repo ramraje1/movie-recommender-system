@@ -8,7 +8,7 @@ import gdown
 import os
 # --- Function to fetch poster using OMDb API ---
 def fetch_poster(movie_title):
-    api_key = "db632d69"   # 🔑 Replace with your OMDb API key
+    api_key = st.secrets["OMDB_API_KEY"]   
     url = f"http://www.omdbapi.com/?t={movie_title}&apikey={api_key}"
     data = requests.get(url).json()
 
@@ -66,3 +66,4 @@ if st.button('Recommend'):
             with cols[i]:
                 st.text(names[i])
                 st.image(posters[i])
+
